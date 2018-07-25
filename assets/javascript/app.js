@@ -36,6 +36,18 @@ $("#timer").html("<h2>Time Remaining:  " + gameTime + "</h2>");
 //define correct answers for each question
 
 //if-else statements for checking each question and answer
+if (input.value == "correct"){
+    correctAnswers++;
+    console.log("answered correctly");
+}
+else if (input.value == "incorrect"){
+    incorrectAnswers++;
+    console.log("answered incorrectly");
+}
+else {
+    unAnswered++;
+    console.log("unanswered");
+}
 
 //display # correct
 
