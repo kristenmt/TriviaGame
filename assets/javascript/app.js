@@ -20,12 +20,14 @@ $("#start-game").on("click", function() {
     
     $("#quiz").show();
     timerGo = setInterval(decrement, 1000);
+    console.log("Game started");
   });
 function decrement(){
     gameTime--;
-}
-$("#timer").html(gameTime);
+    console.log("timer going");
 
+$("#timer").html("<h2>Time Remaining:  " + gameTime + "</h2>");
+}
 
 //function for user pressing done button prior to end of timer
 
