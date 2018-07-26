@@ -1,8 +1,6 @@
 
 //var for quiz timer
-//var gameTime = 120;
-//changed to 10 for testing purposes--change back to 120 when complete
-var gameTime = 40;
+var gameTime = 100;
 //var for # of correct questions
 var correctAnswers = 0;
 //var for # of incorrect questions
@@ -17,26 +15,24 @@ $(document).ready(function () {
     $("#quiz").hide();
     //hide quiz results/done page
     $("#results-div").hide();
+    
     //click start button to begin the game and timer
-
     $("#start-game").on("click", function () {
 
         $("#quiz").show();
         timerGo = setInterval(decrement, 1000);
         console.log("Game started");
         
-        
     });
+    //run timer
     function decrement() {
         gameTime--;
         console.log("timer going");
-    //function for user running out of time
-
         $("#timer").html("<h2>Time Remaining:  " + gameTime + "</h2>");
+       //function for user running out of time  
         if (gameTime < 1) {
             console.log("time's up!");
-            clearInterval(timerGo);
-            $("#timer").html("<h2>Time Remaining: " + gameTime + "</h2>");
+            clearInterval(timerGo);            
             $("#quiz").hide();
             $("#timer").hide();
             $("#results-div").show();

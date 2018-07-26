@@ -45,14 +45,25 @@ input{
 #results h3{
     font-family: 'New Rocker', cursive;
     color: rgb(134, 6, 6);
-    font-size: 28px;
+    font-size: 38px;
+    margin-top: 45px;
 }
 #results h4{
     font-family: 'New Rocker', cursive;
-    font-size: 25px;
+    font-size: 29px;
     text-decoration: underline;
 }
 #results h5{
     font-family: 'Roboto', sans-serif;
     color: rgb(134, 6, 6);
+}
+footer{
+    font-family: 'New Rocker', cursive;
+    font-size: 19px;
+    background-color: rgb(134, 6, 6);
+    color: white;
+    height: 140px;
+    margin-top: 160px;
+    text-align: center;
+    padding-top: 55px;
 }
