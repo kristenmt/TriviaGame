@@ -2,7 +2,7 @@
 //var for quiz timer
 //var gameTime = 120;
 //changed to 10 for testing purposes--change back to 120 when complete
-var gameTime = 10;
+var gameTime = 40;
 //var for # of correct questions
 var correctAnswers = 0;
 //var for # of incorrect questions
