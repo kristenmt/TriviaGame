@@ -38,6 +38,7 @@ $(document).ready(function () {
             clearInterval(timerGo);
             $("#timer").html("<h2>Time Remaining: " + gameTime + "</h2>");
             $("#quiz").hide();
+            $("#timer").hide();
             $("#results-div").show();
             gameResults();
         };
@@ -47,6 +48,7 @@ $(document).ready(function () {
     $("#done").on("click", function () {
         clearInterval(timerGo);
         $("#quiz").hide();
+        $("#timer").hide();
         $("#results-div").show();
         gameResults();
         console.log("user done");
@@ -203,7 +205,7 @@ function gameResults(){
     //display # incorrect
     $("#total-incorrect").html("<h5>You got " + incorrectAnswers + " wrong!");
     //display # unanswered
-    $("#total-unanswered").html("<h5>You did not answer " + unAnswered + " questions!");
+    $("#total-unanswered").html("<h5>You did not answer " + unAnswered + " question(s).");
 }
 });
 
