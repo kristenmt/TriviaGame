@@ -51,15 +51,9 @@ $(document).ready(function () {
         gameResults();
         console.log("user done");
     });
-   
-    // for (let index = 0; index < questions.length; index++){
-    //     var questions = questions[index];
-    //     var answer = questions[index].correctAnswers;
-    
+
 //array of objects for questions and answers to be checked
 
-// $("#quiz").on("click",function(){
-//     event.preventDefault();
 function gameResults(){
     var answer1 = $("input[name=q-1]:checked").val();
     var answer2 = $("input[name=q-2]:checked").val();
@@ -181,11 +175,11 @@ function gameResults(){
         correctAnswers++;
         console.log("#9 is correct");
     }
-    else if("incorrect" === answer3){
+    else if("incorrect" === answer9){
         incorrectAnswers++;
         console.log("#9 is incorrect");
     }
-    else if(undefined === answer3){
+    else if(undefined === answer9){
         unAnswered++;
         console.log("#9 is unanswered");
     }
@@ -202,16 +196,14 @@ function gameResults(){
         unAnswered++;
         console.log("#10 is unanswered");
     }
-}
-});
-
-    
-
-  
 
     //display # correct
+    $("#total-correct").html("<h5>You got " + correctAnswers + " correct!");
 
     //display # incorrect
-
+    $("#total-incorrect").html("<h5>You got " + incorrectAnswers + " wrong!");
     //display # unanswered
+    $("#total-unanswered").html("<h5>You did not answer " + unAnswered + " questions!");
+}
+});
 
