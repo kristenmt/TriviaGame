@@ -15,7 +15,8 @@ var timerGo;
 $(document).ready(function () {
     //hide quiz questions
     $("#quiz").hide();
-
+    //hide quiz results/done page
+    $("#results-div").hide();
     //click start button to begin the game and timer
 
     $("#start-game").on("click", function () {
@@ -37,6 +38,7 @@ $(document).ready(function () {
             clearInterval(timerGo);
             $("#timer").html("<h2>Time Remaining: " + gameTime + "</h2>");
             $("#quiz").hide();
+            $("#results-div").show();
             gameResults();
         };
     }
@@ -45,6 +47,7 @@ $(document).ready(function () {
     $("#done").on("click", function () {
         clearInterval(timerGo);
         $("#quiz").hide();
+        $("#results-div").show();
         gameResults();
         console.log("user done");
     });
