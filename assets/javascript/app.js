@@ -20,6 +20,7 @@ $(document).ready(function () {
     $("#start-game").on("click", function () {
 
         $("#quiz").show();
+        clearInterval(timerGo);
         timerGo = setInterval(decrement, 1000);
         console.log("Game started");
         
